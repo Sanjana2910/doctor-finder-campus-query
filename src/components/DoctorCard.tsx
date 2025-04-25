@@ -22,7 +22,7 @@ export const DoctorCard = ({ doctor }: DoctorCardProps) => {
         </div>
         <div className="text-sm text-gray-600">
           <span className="font-medium">Consultation Types:</span>{" "}
-          {doctor.consultationType.join(", ")}
+          {doctor.consultationType?.join(", ") || "Not specified"}
         </div>
         <div className="text-sm font-semibold text-blue-600">
           Fees: ₹{doctor.fees}
