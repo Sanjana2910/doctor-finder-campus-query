@@ -15,7 +15,7 @@ export const DoctorCard = ({ doctor }: DoctorCardProps) => {
       <CardContent className="space-y-2">
         <div className="text-sm text-gray-600">
           <span className="font-medium">Specialties:</span>{" "}
-          {doctor.specialities.join(", ")}
+          {doctor.specialities.map(specialty => specialty.name).join(", ")}
         </div>
         <div className="text-sm text-gray-600">
           <span className="font-medium">Experience:</span> {doctor.experience} years

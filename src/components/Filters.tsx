@@ -50,11 +50,11 @@ export const Filters = ({
           {specialties.map((specialty) => (
             <div key={specialty} className="flex items-center space-x-2">
               <Checkbox
-                id={specialty}
+                id={`specialty-${specialty}`}
                 checked={selectedSpecialties.includes(specialty)}
                 onCheckedChange={() => onSpecialtyChange(specialty)}
               />
-              <Label htmlFor={specialty}>{specialty}</Label>
+              <Label htmlFor={`specialty-${specialty}`}>{specialty}</Label>
             </div>
           ))}
         </div>

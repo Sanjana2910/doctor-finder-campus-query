@@ -28,7 +28,7 @@ const Index = () => {
   const getAllSpecialties = (doctors: Doctor[]) => {
     const specialtiesSet = new Set<string>();
     doctors.forEach((doctor) =>
-      doctor.specialities.forEach((specialty) => specialtiesSet.add(specialty))
+      doctor.specialities.forEach((specialty) => specialtiesSet.add(specialty.name))
     );
     return Array.from(specialtiesSet);
   };
@@ -47,7 +47,7 @@ const Index = () => {
     if (selectedSpecialties.length > 0) {
       filtered = filtered.filter((doctor) =>
         doctor.specialities.some((specialty) =>
-          selectedSpecialties.includes(specialty)
+          selectedSpecialties.includes(specialty.name)
         )
       );
     }
