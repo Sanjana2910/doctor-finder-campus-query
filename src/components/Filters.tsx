@@ -16,10 +16,10 @@ interface FiltersProps {
 }
 
 export const Filters = ({
-  specialties,
-  selectedSpecialties,
-  consultationType,
-  sortBy,
+  specialties = [],
+  selectedSpecialties = [],
+  consultationType = "",
+  sortBy = "",
   onSpecialtyChange,
   onConsultationTypeChange,
   onSortChange,
